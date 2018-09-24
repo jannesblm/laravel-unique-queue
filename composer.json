@@ -1,25 +1,38 @@
 {
-    "name": "mlntn/laravel-unique-queue",
-    "type": "library",
-    "description": "Laravel queue connection that prevents identical jobs from being queued",
-    "keywords": ["laravel", "queue", "unique"],
-    "homepage": "http://github.com/mlntn/laravel-unique-queue",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Jared Mellentine",
-            "email": "jared@mellentine.com"
-        }
-    ],
-    "minimum-stability": "stable",
-    "autoload": {
-        "classmap": ["src/"]
+  "name": "mlntn/laravel-unique-queue",
+  "type": "library",
+  "description": "Laravel queue connection that prevents identical jobs from being queued",
+  "keywords": [
+    "laravel",
+    "queue",
+    "unique"
+  ],
+  "homepage": "http://github.com/mlntn/laravel-unique-queue",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Jared Mellentine",
+      "email": "jared@mellentine.com"
     },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Mlntn\\Providers\\QueueServiceProvider"
-            ]
-        }
+    {
+      "name": "Jannes Blume",
+      "email": "jb@jannesblume.net"
     }
+  ],
+  "require": {
+    "php": ">=5.6.36"
+  },
+  "minimum-stability": "stable",
+  "autoload": {
+    "classmap": [
+      "src/"
+    ]
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Mlntn\\Providers\\QueueServiceProvider"
+      ]
+    }
+  }
 }

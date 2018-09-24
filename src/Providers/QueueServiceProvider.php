@@ -2,6 +2,7 @@
 
 namespace Mlntn\Providers;
 
+use Illuminate\Queue\QueueManager;
 use Illuminate\Support\ServiceProvider;
 use Mlntn\Queue\Connectors\RedisUniqueConnector;
 use Mlntn\Queue\Connectors\HorizonUniqueConnector;

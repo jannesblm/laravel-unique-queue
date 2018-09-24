@@ -19,9 +19,9 @@ class RedisUniqueConnector extends RedisConnector
     {
         return new RedisUniqueQueue(
             $this->redis, $config['queue'],
-            $config['connection'] ?? $this->connection,
-            $config['retry_after'] ?? 60,
-            $config['block_for'] ?? null
+            Arr::get($config, 'connection', $this->connection),
+            Arr::get($config, 'retry_after', 60),
+            Arr::get($config, 'block_for', null)
         );
     }
 
