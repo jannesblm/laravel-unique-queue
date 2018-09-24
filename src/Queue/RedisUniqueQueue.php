@@ -33,6 +33,7 @@ class RedisUniqueQueue extends RedisQueue
 
         if (parent::pushRaw($payload, $queue, $options)) {
             $connection->hset($tracker, $data['uniqueIdentifier'], $data['id']);
+            return $data['id'];
         }
 
         return null;
